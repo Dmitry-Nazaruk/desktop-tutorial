@@ -1,0 +1,6 @@
+def direction(facing, turn):
+    dirs = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
+    face_idx = dirs.index(facing)
+    turns = turn / 45
+    end_idx = int((face_idx + turns) % len(dirs))
+    return dirs[end_idx]
